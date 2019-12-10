@@ -71,3 +71,21 @@ variable "services" {
 }
 
 ########### service user toml ###################
+
+variable "license_string" {
+  description = "The license string for bamboo"
+  type        = string
+  default     = ""
+}
+
+variable "server_id" {
+  description = "The ID for this bamboo license instance"
+  type        = string
+  default     = ""
+}
+
+variable "server_key" {
+  description = "The server key associated with this license"
+  type        = string
+  default     = ""
+}

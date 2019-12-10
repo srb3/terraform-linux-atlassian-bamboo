@@ -5,13 +5,16 @@ locals {
       "channel" = var.channel,
       "group"   = var.service_group,
       "user_toml_config"  = {
+        "license_string" = var.license_string,
+        "server_id" = var.server_id,
+        "server_key" = var.server_key
       }
     }
   }
   services = length(keys(var.services)) > 1 ? merge(local.service, var.services) : local.service
 }
 
-module "load-chef-load" {
+module "bamboo_create" {
   source            = "devoptimist/habitat/chef"
   version           = "0.0.5"
   ips               = var.ips
