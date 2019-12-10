@@ -1,6 +1,5 @@
 # Overview
 This module will deploy atlassian bamboo onto a linux server, linux server must have systemd
-as soon as the service is up.
 
 #### Supported platform families:
  * RHEL
