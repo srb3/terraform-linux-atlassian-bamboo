@@ -1,7 +1,7 @@
 locals {
   instance_count = var.instance_count
   service        = {
-    "devoptimist/atlassian-bamboo" = {
+    "srb3/atlassian-bamboo" = {
       "channel" = var.channel,
       "group"   = var.service_group,
       "user_toml_config"  = {
@@ -15,8 +15,8 @@ locals {
 }
 
 module "bamboo_create" {
-  source            = "devoptimist/habitat/chef"
-  version           = "0.0.5"
+  source            = "srb3/habitat/chef"
+  version           = "0.13.0"
   ips               = var.ips
   instance_count    = local.instance_count
   user_name         = var.ssh_user_name
